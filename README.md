@@ -1,111 +1,20 @@
 # Django + Vercel + Tailwind = ❤️
 
-**Es una base lista para ser clonada!**
+Es mi primer portafolio publico al 100% con dominio propio
 
-- Ya te reconoce los staticsfiles
-- Te permite trabajar con Tailwind
-- Usas Vercel
-- Usas Django
 
-*Que mas puedes pedir?*
+## Index
 
-Solo te falta el dominio para tu grandiosa web/app, pero ese no te lo puedo dar yo...
+<img src=".readmeimages/1_index.png" width="50%"/>
 
-## Antes de empezar a programar!
+## Repositorios
 
-Tu carpeta `static/` ahora esta dentro de `theme/static/` si quieres agregar otras carpetas puedes cambiar tu configuracion de `STATICFILES_DIRS`
+<img src=".readmeimages/2_repos.png" width="50%"/>
 
-```py
-#vercel_app/settings.py
-STATICFILES_DIRS = [
-  os.path.join(BASE_DIR, "theme/static/"),
-  os.path.join(BASE_DIR, "RUTA_DE_TU_OTRA_CARPETA")
-]
-```
+## Social
 
-Te recomiendo crear un entorno virtual, asi tendras mas control de todo
+<img src=".readmeimages/3_social.png" width="50%"/>
 
-```sh
-python -m venv NOMBRE
-```
+## Contacto
 
-Activa tu entorno
-
-```sh
-# Unix
-source NOMBRE/bin/activate
-```
-
-Instala los requerimientos, este archivo `requirements.txt` solo contiene lo basico para hacer funcionar esta pagina, asi que tienes que instalar los modulos faltantes
-
-```sh
-pip install -r requirements.txt
-```
-
-## Desarrollo!
-
-Para iniciar localmente debes de ejecutar Tailwind y luego el servidor de Django, el proceso debe ser en distintas terminales
-
-```sh
-# Terminal 1
-python manage.py tailwind start
-```
-
-```sh
-# Terminal 2
-python manage.py runserver
-```
-
-Asegurate de tener `Debug` en `True`
-
-```py
-#vercel_app/settings.py
-Debug = True
-```
-
-Verifica tus `ALLOWED_HOSTS` y si tienes formularios no te olvides de `CSRF_TRUSTED_ORIGINS`
-
-```py
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
-CSRF_TRUSTED_ORIGINS = ['https://127.0.0.1', 'https://.vercel.app']
-```
-
-## Produccion!
-
-Para subir tu pagina correctamente a Vercel, deberias tener estos aspectos en cuenta:
-
-```py
-#vercel_app/settings.py
-Debug = False
-```
-
-Haz las migraciones!
-
-```sh
-python manage.py makemigrations && python manage.py migrate
-```
-
-Tambien puedes poner las migraciones "automaticas" en el archivo `vercel_build_staticfiles.sh` **descomentando** la linea que viene abajo de `Automatic Migrations` esto hara que las migraciones se hagan cada que se recopilen los staticsfiles
-
-```sh
-# Automatic migrations                                       # esta linea NO se debe descomentar
-#echo "Iniciando migraciones..."                             # esta linea se debe descomentar
-#python manage.py makemigrations && python manage.py migrate # esta linea se debe descomentar
-```
-
-Tienes Super usuario?
-
-```sh
-python manage.py createsuperuser
-```
-
-Verifica tus `ALLOWED_HOSTS` y si tienes formularios no te olvides de `CSRF_TRUSTED_ORIGINS`, si ya tienes tu dominio propio aqui es donde tendras que poner tu dominio para darle mayor seguridad a tu web/app
-
-```py
-ALLOWED_HOSTS = ['tu-dominio.com']
-CSRF_TRUSTED_ORIGINS = ['https://tu-dominio.com']
-```
-
-<hr/>
-
-> Este repositorio fue creado el `17 / Nov / 2023`
+<img src=".readmeimages/4_contacto.png" width="50%"/>
