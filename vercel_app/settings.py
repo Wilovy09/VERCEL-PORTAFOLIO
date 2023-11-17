@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'theme',
     'index',
     'proyectos',
+    'social',
 ]
 TAILWIND_APP_NAME = 'theme'
 INTERNAL_IPS = [
