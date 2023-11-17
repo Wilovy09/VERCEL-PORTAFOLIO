@@ -21,13 +21,15 @@ from django.conf import settings
 from index.views import index
 from proyectos.views import proyectos
 from social.views import social
-
+from contacto.views import contacto, contacto_whats
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
     path('proyectos/', proyectos, name='proyectos'),
     path('social/', social, name='social'),
+    path('contacto/', contacto, name='contacto'),
+    path('contacto_whats/', contacto_whats, name='contacto_whats'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
