@@ -18,7 +18,7 @@
 
 <div class="p-4 min-h-[600px]" id="repositorios">
     <h1 class="text-center text-5xl font-bold pt-4">Repositorios</h1>
-    <p class="text-center text-[#353535] pb-16">Github API</p>
+    <p class="text-center text-[#c0c0c0] pb-16">Github API</p>
     <section class="snap-x flex gap-4 p-4 overflow-x-auto" id="slider">
         {#each repos as repo}
             <div class="snap-center shrink-0 w-4/5 rounded max-w-[460px] overflow-x-hidden">
