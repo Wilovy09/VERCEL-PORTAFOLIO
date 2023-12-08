@@ -5,7 +5,7 @@
 </script>
 
 <Navbar />
-<div class="min-h-screen bg-[#090909] text-white">
+<div class="min-h-screen bg-[#111111] text-white">
     <slot />
 </div>
 <Footer />

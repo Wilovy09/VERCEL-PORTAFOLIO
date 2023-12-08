@@ -15,7 +15,7 @@
                         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                             <svg width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 17c3.333 -3.333 5 -6 5 -8c0 -3 -1 -3 -2 -3s-2.032 1.085 -2 3c.034 2.048 1.658 4.877 2.5 6c1.5 2 2.5 2.5 3.5 1l2 -3c.333 2.667 1.333 4 3 4c.53 0 2.639 -2 3 -2c.517 0 1.517 .667 3 2" /></svg>
                         </div>
-                        <input name="Nombre" type="text" id="Nombre" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full pl-10 p-2.5" placeholder="Elon Tusk">
+                        <input name="Nombre" type="text" id="Nombre" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full pl-10 p-2.5" placeholder="Elon 🚀">
                     </div>
 
                     <label for="whatsapp" class="block mb-2 text-2xl text-white">Whatsapp</label>
@@ -28,7 +28,7 @@
 
                     <label for="Mensaje">
                         <h1 class="block mb-2 text-2xl text-white">Mensaje</h1>
-                        <textarea required name="Mensaje" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full pl-2 pt-2" id="Mensaje" cols="45" rows="5" placeholder="Me gutaria empezar un proyecto contigo 🚀"></textarea>
+                        <textarea required name="Mensaje" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full pl-2 pt-2" id="Mensaje" cols="45" rows="5" placeholder="Me gutaria empezar un proyecto contigo."></textarea>
                     </label>
 
                     <div class="flex justify-center pt-8">
