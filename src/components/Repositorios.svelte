@@ -23,7 +23,7 @@
     <section class="snap-x flex gap-4 p-4 overflow-x-auto" id="slider">
         {#each repos as repo}
             <div class="snap-center shrink-0 rounded max-w-[400px] overflow-x-hidden">
-                <div class="bg-white rounded-xl min-w-[220px] h-[250px] text-black">
+                <div class="bg-white rounded-xl min-w-[220px] h-[200px] text-black">
                     <div class="flex justify-between mx-4 pt-6">
                         <a href="{repo.html_url}" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="35" height="35" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
@@ -34,10 +34,7 @@
                             </a>
                         {/if}
                     </div>
-                    <div class="flex justify-center">
-                        <img class="relative rounded-full w-20 -top-12" src="{repo.owner.avatar_url}" alt="Avatar">
-                    </div>
-                    <h1 class="relative text-center font-bold text-2xl -top-12">{repo.owner.login}</h1>
+                    <h1 class="relative text-center font-bold text-2xl -top-8">{repo.owner.login}</h1>
                     <br>
                     <h1 class="relative text-center uppercase font-semibold -top-12">{repo.name}</h1>
                     <p class="relative text-center mx-4 -top-12">{repo.description}</p>
