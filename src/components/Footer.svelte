@@ -32,7 +32,7 @@
                     </label>
 
                     <div class="flex justify-center pt-8">
-                        <button type="submit" class="transition ease-in-out text-white bg-green-400 border-0 py-2 px-6 focus:outline-none hover:line-through hover:bg-green-600 rounded text-lg">Enviar</button>
+                        <button type="submit" class="transition ease-in-out text-black bg-green-400 border-0 py-2 px-6 font-semibold focus:outline-none hover:line-through hover:bg-green-600 rounded text-lg">Enviar</button>
                     </div>
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="box">
