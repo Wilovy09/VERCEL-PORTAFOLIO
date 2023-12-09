@@ -4,8 +4,13 @@
     import Footer from "../components/Footer.svelte";
 </script>
 
-<Navbar />
-<div class="min-h-screen bg-[#111111] text-white">
-    <slot />
-</div>
-<Footer />
+<section class="min-w-[500px] max-w-[1680px] w-full">
+    <Navbar/>
+    <slot/>
+    <Footer/>
+</section>
+
+<style>
+    
+</style>
+

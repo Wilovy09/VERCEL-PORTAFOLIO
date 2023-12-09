@@ -1,0 +1,17 @@
+<script>
+    import Card from './card/Card.svelte';
+</script>
+
+<section class="py-24" id="proyectos">
+    <h2 class="text-[#26bb80] text-5xl font-bold pb-12 uppercase text-center">Proyectos</h2>
+    <div class="flex justify-center">
+        
+        <div class="gap-6 px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <Card title="API con Express & Prisma" description="Mi primera CRUD API usando Express & Prisma" github="https://github.com/Wilovy09/SVELTE_EXPRESS_PRISMA_SUPABASE_API" img="https://github.com/Wilovy09/SVELTE_EXPRESS_PRISMA_SUPABASE_API/blob/master/readIMAGES/Screenshot_select-area_20231208194555.png?raw=true"/>
+            <Card title="Cifrador" description="Cifrador Cesar elaborado con JS" github="https://github.com/Wilovy09/CifradorCesar.github.io" web="https://wilovy09.github.io/CifradorCesar.github.io/" img="https://github.com/Wilovy09/CifradorCesar.github.io/blob/main/public/Screenshot_select-area_20231208194047.png?raw=true"/>
+            <Card title="Punto de venta" description="Punto de venta elaborado con Django" github="https://github.com/Wilovy09/PDV-DJANGO" img="https://github.com/Wilovy09/PDV-DJANGO/blob/main/readIMAGES/Screenshot_select-area_20231208193227.png?raw=true"/>
+            <Card title="LinkHub" description="Similar a LinkTree" github="https://github.com/Wilovy09/Mi-LinkHub-ASTRO" web="https://my-linkhub-template.netlify.app/" img="https://github.com/Wilovy09/Mi-LinkHub-ASTRO/blob/main/readIMAGES/Screenshot_select-area_20231208194159.png?raw=true"/>
+        </div>
+
+    </div>
+</section>

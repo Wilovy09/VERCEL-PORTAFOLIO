@@ -1,51 +1,74 @@
-<nav class="lg:px-16 px-6 bg-black text-white shadow-md flex flex-wrap items-center lg:py-0 py-2">
-    <div class="flex-1 flex justify-between items-center">
-      <a href="/" class="flex text-lg font-semibold">
-        <img src="/icon.svg" width="50" height="50" class="p-2" alt="Wilovy LOGO">
-      </a>
-    </div>
-    <label for="menu-toggle" class="cursor-pointer lg:hidden block">
-      <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-        <title>Menu</title>
-        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-      </svg>
-    </label>
-    <input class="hidden" type="checkbox" id="menu-toggle">
-    <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
-      <nav>
-        <ul class="text-xl text-center items-center gap-x-5 pt-4 md:gap-x-4 lg:text-lg lg:flex  lg:pt-0">
-          <li class="py-2 lg:py-0">
-            <a class="inline-flex flex-col items-center justify-center px-5 hover:bg-black group" href="/">
-            <span class="text-sm text-gray-300 group-hover:text-green-400 group-hover:line-through">Inicio</span>
-            </a>
-          </li>
-          <li class="py-2 lg:py-0">
-            <a class="inline-flex flex-col items-center justify-center px-5 hover:bg-black group" href="#repositorios">
-            <span class="text-sm text-gray-300 group-hover:text-green-400 group-hover:line-through">Repositorios</span>
-            </a>
-          </li>
-          <li class="py-2 lg:py-0">
-            <a class="inline-flex flex-col items-center justify-center px-5 hover:bg-black group" href="#social">
-            <span class="text-sm text-gray-300 group-hover:text-green-400 group-hover:line-through">Social</span>
-            </a>
-          </li>
-          <li class="py-2 lg:py-0">
-            <a class="inline-flex flex-col items-center justify-center px-5 hover:bg-black group" href="#contacto">
-            <span class="text-sm text-gray-300 group-hover:text-green-400 group-hover:line-through">Contacto</span>
-            </a>
-          </li>
-          <li class="py-2 lg:py-0">
-            <a class="inline-flex flex-col items-center justify-center px-5 hover:bg-black group" href="/Emiliano_Maldonado_CV.pdf" target="_blank">
-            <span class="text-sm text-gray-300 group-hover:text-green-400 group-hover:line-through">Descargar CV</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </nav>
+<nav class="lg:px-16 px-6 bg-black text-white shadow-md flex flex-wrap items-center lg:py-0 py-2" data-svelte-h="svelte-1lsm3ud">
+	<div class="flex-1 flex justify-between items-center">
+		<a href="/" class="flex text-lg font-semibold">
+            <img src="/icon.svg" width="50" height="50" class="p-2" alt="Wilovy LOGO" />
+        </a>
+	</div>
+	<label for="menu-toggle" class="cursor-pointer lg:hidden block">
+        <svg class="fill-current text-white" width="20" height="20" viewBox="0 0 20 20"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg>
+    </label> 
+    <input class="hidden svelte-1ah0gke" type="checkbox" id="menu-toggle" />
+	<div class="hidden lg:flex lg:items-center lg:w-auto w-full svelte-1ah0gke" id="menu">
+		<ul class="text-xl text-center items-center gap-x-5 pt-4 md:gap-x-4 lg:text-lg lg:flex lg:pt-0">
+				<li class="py-2 lg:py-0">
+					<a class="inline-flex flex-col items-center justify-center px-5 group" href="/">
+                        <span class="nav-item text-gray-300 group-hover:text-[#26bb80]">Inicio</span>
+                    </a>
+				</li>
+				<li class="py-2 lg:py-0">
+					<a class="inline-flex flex-col items-center justify-center px-5 group"
+						href="/#proyectos">
+                        <span class="nav-item text-gray-300 group-hover:text-[#26bb80]">Proyectos</span>
+                    </a>
+				</li>
+				<li class="py-2 lg:py-0">
+					<a class="inline-flex flex-col items-center justify-center px-5 group"
+						href="/notas/">
+                        <span class="nav-item text-gray-300 group-hover:text-[#26bb80]">Notas</span>
+                    </a>
+				</li>
+				<li class="py-2 lg:py-0">
+					<a class="inline-flex flex-col items-center justify-center px-5 group"
+						href="/#contacto">
+                        <span class="nav-item text-gray-300 group-hover:text-[#26bb80]">Contacto</span>
+                    </a>
+				</li>
+				<li class="py-2 lg:py-0">
+					<a class="inline-flex flex-col items-center justify-center px-5 group"
+						href="/Emiliano_Maldonado_CV.pdf" target="_blank">
+                        <span class="nav-item text-gray-300 group-hover:text-[#26bb80]">Descargar CV</span>
+                    </a>
+				</li>
+			</ul>
+	</div>
+</nav>
 
 <style>
-    #menu-toggle:checked + #menu {
-        display: block;
+	.nav-item:hover{
+        --bg-size: 400%;
+        --color-one: #26bb80;
+        --color-two: #12543a;
+        background: linear-gradient(90deg,var(--color-one),var(--color-two),var(--color-one)) 0 0 / var(--bg-size) 100%;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        animation: move-bg 8s infinite linear;
+    }
+
+    @keyframes move-bg {
+        to {
+            background-position: var(--bg-size) 0;
+        }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .nav-item:hover {
+            animation: move-bg 8s linear infinite;
+        }
+        @keyframes move-bg {
+            to {
+                background-position: var(--bg-size) 0;
+            }
+        }
     }
 </style>
