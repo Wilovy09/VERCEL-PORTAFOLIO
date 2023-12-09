@@ -1,5 +1,5 @@
 {
-	"name": "portafolio-svelte-remake",
+	"name": "portfolio-svelte",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
@@ -10,7 +10,7 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/adapter-auto": "^2.1.1",
 		"@sveltejs/kit": "^1.27.4",
 		"autoprefixer": "^10.4.16",
 		"eslint": "^8.28.0",

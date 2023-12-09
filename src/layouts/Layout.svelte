@@ -4,7 +4,7 @@
     import Footer from "../components/Footer.svelte";
 </script>
 
-<section class="min-w-[500px] max-w-[1680px] w-full">
+<section class="max-w-[1680px] w-full">
     <Navbar/>
     <slot/>
     <Footer/>
