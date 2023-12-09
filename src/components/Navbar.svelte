@@ -44,6 +44,10 @@
 </nav>
 
 <style>
+    #menu-toggle:checked + #menu {
+        display: block;
+    }
+    
 	.nav-item:hover{
         --bg-size: 400%;
         --color-one: #26bb80;
