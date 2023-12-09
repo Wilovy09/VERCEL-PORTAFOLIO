@@ -1,7 +1,7 @@
 <nav class="lg:px-16 px-6 bg-black text-white shadow-md flex flex-wrap items-center lg:py-0 py-2" data-svelte-h="svelte-1lsm3ud">
 	<div class="flex-1 flex justify-between items-center">
 		<a href="/" class="flex text-lg font-semibold">
-            <img src="/icon.svg" width="50" height="50" class="p-2" alt="Wilovy LOGO" />
+            <img src="/icon.svg" width="50" height="50" class="p-2" alt="Logo de la pagina de Wilovy09" />
         </a>
 	</div>
 	<label for="menu-toggle" class="cursor-pointer lg:hidden block">

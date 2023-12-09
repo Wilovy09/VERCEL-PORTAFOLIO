@@ -1,7 +1,7 @@
 <div class="text-white flex items-center justify-center">
     
     <div class="text-center">
-        <h1 class="text-[#26bb80] text-5xl font-bold md:pt-32 pb-12 uppercase">Tecnologias</h1>
+        <h2 class="text-[#26bb80] text-5xl font-bold md:pt-32 pb-12 uppercase">Tecnologias</h2>
         
         <div class="flex flex-wrap justify-center gap-4 sm:justify-center pb-16">
             <svg class="hover:text-[#39bdf9] transition ease-in-out" width="50" height="50" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="currentColor" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11.667 6c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 2 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968zm-4 6.5c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 1.975 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968z" /></svg>

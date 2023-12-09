@@ -2,7 +2,7 @@
 	<div class="container px-6 py-1 mx-auto">
 		<hr class="my-1 border-white md:my-6" />
 		<div class="flex flex-col items-center justify-center sm:flex-row">
-			<a href="/"><img class="w-auto h-10 text-white" src="/icon.svg" alt="LOGO" /></a>
+			<a href="/"><img class="w-auto h-10 text-white" src="/icon.svg" alt="Logo de la pagina de Wilovy09" /></a>
 		</div>
 		<div class="grid grid-cols-1">
 			<div class="flex gap-4 justify-center py-5 text-white" id="contacto">
