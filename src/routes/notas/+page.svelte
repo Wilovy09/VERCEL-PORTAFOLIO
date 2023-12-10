@@ -8,6 +8,7 @@
     <section class="min-h-screen overflow-hidden">
         <LinkNotas title="Prisma" link="https://github.com/Wilovy09/Prisma-Curso-ORM/blob/main/README.md"/>
         <LinkNotas title="Express & Prisma" link="https://github.com/Wilovy09/NodeJS_Prisma_API/blob/main/README.md"/>
+        <LinkNotas title="Svelte, Express & Prisma" link="https://github.com/Wilovy09/Svelte-Express-Prisma-CRUD/blob/main/README.md"/>
     </section>
 </Layout>
 
