@@ -1,14 +1,12 @@
-<script>
-    import Layout from '../../layouts/Layout.svelte';
-    import LinkNotas from '../../components/notas/LinkNotas.svelte';
-</script>
+---
+import Layout from '../../layouts/Layout.astro';
+import LinkNotas from '../../components/notas/LinkNotas.svelte';
+---
 
-<Layout>
-    <h2 class="text-[#26bb80] text-5xl font-bold py-12 uppercase text-center">Mis Notas</h2>
+<Layout title="Notas | Wilovy">
+	<h2 class="text-[#26bb80] text-5xl font-bold py-12 uppercase text-center">Mis Notas</h2>
     <section class="min-h-screen overflow-hidden">
-        <LinkNotas title="Prisma" link="https://github.com/Wilovy09/Prisma-Curso-ORM/blob/main/README.md"/>
-        <LinkNotas title="Express & Prisma" link="https://github.com/Wilovy09/NodeJS_Prisma_API/blob/main/README.md"/>
-        <LinkNotas title="Svelte, Express & Prisma" link="https://github.com/Wilovy09/Svelte-Express-Prisma-CRUD/blob/main/README.md"/>
+        <LinkNotas title="Svelte, Express & Prisma" link="/notas/prisma_svelte_express/"/>
     </section>
 </Layout>
 
