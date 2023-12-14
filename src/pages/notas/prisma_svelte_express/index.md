@@ -27,6 +27,7 @@ npm i -D prisma
 npm i express
 npm i cors
 ```
+
 <br/>
 
 `@prisma/client` debe instalar en automatico con la instalacion de prisma, pero por si no se instala este es el comando
@@ -810,4 +811,8 @@ Este paso puede ser un poco mas complicado, pero es solo la combinacion de 2 ele
         line-height: 2.5rem/* 40px */;
         
     }
+    pre{
+        padding: 1rem
+    }
+    
 </style>
