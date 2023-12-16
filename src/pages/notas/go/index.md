@@ -8,7 +8,7 @@ layout: ../../../layouts/BlogLayout.astro
 
 # Aprendiendo GO
 
-Estas son mis notas que hago mientras veo un <a href="https://youtube.com/playlist?list=PLt1J5u9LpM5-L-Ps8jjr91pKhFxAnxKJp&si=wf10AsZLJSnjjoHK" target="_blank">curso</a> de Go desde 0, la idea es aprenderlo para usarlo de `backend`
+Estas son mis notas que hago mientras veo un <a class="a" href="https://youtube.com/playlist?list=PLt1J5u9LpM5-L-Ps8jjr91pKhFxAnxKJp&si=wf10AsZLJSnjjoHK" target="_blank">curso</a> de Go desde 0, la idea es aprenderlo para usarlo de `backend`
 
 - Es necesario tener ya conocimientos sobre algun tipo de lenguaje ya que hay partes que no se explican al 100% porque son conceptos que comparten todos los lenguajes
 - Mi opinion de `Go`, es lo mejor de C y Python
@@ -1311,7 +1311,7 @@ func main() {
 
 <style>
 
-    a{
+    .a{
         color: #26bb80;
     }
 
