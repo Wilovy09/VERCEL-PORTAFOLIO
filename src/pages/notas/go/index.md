@@ -675,7 +675,636 @@ func main() {
 }
 ```
 
-## WIP
+## Arrays
+
+Array es un almacenador de datos fijos, puede almacenar cantidad de datos pero indicando cuantos datos va almacenar ese array, y en Go, como es un lenguaje tipado solo se puede almacenar un tipo de datos
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+
+    // Creamos un array de 5 elementos de tipo string
+    var array [5]string
+    // El tamaño del array es fijo
+    // El tamaño del array se define en la declaración
+    // El tipo de dato de los elementos del array se define en la declaración
+
+    // Recordemos que el 0 es el primer elemento
+    array[0] = "Elemento 1"
+    array[1] = "Elemento 2"
+    array[2] = "Elemento 3"
+    array[3] = "Elemento 4"
+    array[4] = "Elemento 5"
+
+    // Imprimimos el array
+    fmt.Println(array)
+
+    /*
+        SALIDA
+        
+        [Elemento 1 Elemento 2 Elemento 3 Elemento 4 Elemento 5]
+    */
+
+    //                 Esto son sus valores predeterminados
+    array2 := [3] int {1, 2, 3}
+
+    fmt.Println(array2)
+    /*
+        SALIDA
+        
+        [Elemento 1 Elemento 2 Elemento 3 Elemento 4 Elemento 5]
+
+        [1 2 3]
+    */
+}
+```
+
+## Slicen
+
+Son parecidos a los array que tambien almacena datos, pero los slicen almacena cantidad de datos indeterminados que puede almacenar cantidad de variables que tu desees
+
+Puedes definir un slicen vacio y luego agregar los datos con la funcion append
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+
+    var slicen []string
+
+    // usamos VAR = append(VAR, VALOR)
+    slicen = append(slicen, "a")
+    slicen = append(slicen, "b", "c")
+    slicen = append(slicen, "d", "e", "f")
+
+    fmt.Println(slicen)
+
+    // Otra forma de declarar un slice con sus valores iniciales
+    slicen2 := []string{"g", "h", "i"}
+
+    fmt.Println(slicen2)
+}
+```
+
+## Funciones
+
+Son utiles para ordenar nuestro codigo y tambien para rehutilizar un codigo en nuestra app
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    saludar()
+    saludar2("Juan")
+    saludar3()
+    fmt.Println(saludar4("Juan"))
+
+    // saludar5()
+    datos := saludar5()
+    fmt.Println("Hola, ",datos)
+}
+
+// definimos una funcion
+func saludar(){
+    fmt.Println("Saludar\nHola mundo desde la func saludar")
+}
+// funcion con parametros
+func saludar2(nombre string){
+    fmt.Println("\nSaludar 2\nHola", nombre)
+}
+// funcion con entrada de datos
+func saludar3() {
+    var nombre string
+    fmt.Print("\nSaludar 3\nIngresa tu nombre: ")
+    fmt.Scanf("%s", &nombre)
+    fmt.Println("Hola", nombre)
+}
+// funcion con retorno de datos
+func saludar4(nombre string) string {
+    return "\nSaludar 4\nHola " + nombre
+}
+// funcion con retorno de datos
+func saludar5() string {
+    var saludos string
+    
+    fmt.Print("\nSaludar 5\nNombre: ")
+    fmt.Scanln(&saludos)
+    
+    return saludos
+}
+
+/*
+    SALIDA
+
+    Saludar
+    Hola mundo desde la func saludar
+
+    Saludar 2
+    Hola Juan
+
+    Saludar 3
+    Ingresa tu nombre: Wilovy
+    Hola Wilovy
+
+    Saludar 4
+    Hola Juan
+
+    Saludar 5
+    Nombre: Go
+    Hola,  Go
+*/
+```
+
+Ejercicio 3:
+
+Haz una funcion que se le manden los datos, sume los datos y luegos los retorne
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    var a, b int
+
+    fmt.Print("Numero 1: ")
+    fmt.Scan(&a)
+
+    fmt.Print("Numero 2: ")
+    fmt.Scan(&b)
+
+    fmt.Println("La suma es: ", suma(a, b))
+}
+
+func suma(a int, b int) int {
+    return a + b
+}
+
+/*
+    SALIDA
+
+    Numero 1: 5
+    Numero 2: 5
+    La suma es:  10
+*/
+```
+
+## Operaciones con cadenas
+
+Para lograr esto tenemos que importar la libreria llamada [string](https://golang.org/pkg/strings/?m=all)
+
+```go
+package main
+
+import (
+    "fmt"
+    "strings"
+)
+
+func main() {
+    test := "Hola Mundo, Hola Golang"
+    var slicen []string
+    slicen = append(strings.Split(test, " "))
+    fmt.Println(slicen, len(slicen))
+}
+
+/*
+    SALIDA
+
+    // strings.ToUpper(test)
+    HOLA MUNDO, HOLA GOLANG
+
+    // strings.ToLower(test)
+    hola mundo, hola golang
+
+    // strings.ReplaceAll(test, "o", "0")
+    H0la Mund0, H0la G0lang
+
+    // strings.Split(test, " ")
+    [Hola Mundo, Hola Golang]
+
+    // fmt.Println(slicen, len(slicen))
+    [Hola Mundo, Hola Golang] 4
+*/
+```
+
+## Paquetes
+
+En Go, un paquete es simplemente una carpeta
+
+Pero hay que tomar en cuenta que no podemos trabajar asi solamente, tenemos que crear nuestro archivo `go.mod`
+
+Utilizamos el comando `go mod init`, le agregamos `github.com/` por convencion, agregamos nuestro usuario `USER/` y por ultimo le agregamos el nombre d enuestro proyecto `PROYECTO/`
+
+```sh
+go mod init github.com/wilovy/go_desde_0
+```
+
+```txt
+📦GO_DESDE_0
+ ┣ 📂mensaje
+ ┃ ┗ 📜saludo1.go
+ ┣ 📜go.mod
+ ┗ 📜main.go
+```
+
+### Funciones publicas
+
+Las funciones publicas en Go, se definen asi:
+
+```go
+// Funcion publica
+func FuncionPublica() {
+    fmt.Println("FuncionPublica")
+}
+
+// Se declaran con su primera letra del nombre en mayusculas
+// El comentario de arriba es lo que aparecera cuando se
+// ponga el cursor por encima del nombre de la funcion
+```
+
+### Funciones privadas
+
+A diferencia de las funciones publicas, aqui se declaran con su primera letra en minusculas
+
+De esta forma Go, entiende que es una funcion privada
+
+Las funciones privadas no pueden ser llamadas fuera del paquete en el que se encuentran, en este caso no podremos llamarla desde el `main.go` pero si podremos llamarla dentro del archivo `saludo1.go` o llamarla en un nuevo archivo que creemos dentro de la carpeta `mensaje/`
+
+```go
+// funcion privada
+func funcionPrivada() {
+    fmt.Println("funcionPrivada")
+}
+```
+
+### mensaje/saludo1.go
+
+```go
+// nombre al paquete
+package mensaje
+
+import "fmt"
+
+// funcion privada
+func funcionPrivada() {
+    fmt.Println("funcionPrivada")
+}
+
+// Funcion publica
+func FuncionPublica() {
+    fmt.Println("FuncionPublica")
+}
+```
+
+### main.go
+
+```go
+package main
+
+// importamos nuestro paquete que esta dentro de la carpeta que creamos (mensaje)
+import "github.com/wilovy/go_desde_0/mensaje"
+
+func main() {
+    // Utilizamos el modulo mensaje con su funcion FuncionPublica
+    mensaje.FuncionPublica()
+}
+
+/*
+    SALIDA
+    
+    $ go run main.go
+    FuncionPublica
+*/
+```
+
+## Map
+
+Los map son como una lista que alamacena cantidad de datos con clave y valor, Map en Go se parece a los diccionarios de Python.
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+
+    // Declaración de un map
+    //          clave : valor
+    map1 := map[string] int {
+        "uno": 1,
+        "dos": 2,
+        "tres": 3,
+    }
+
+    fmt.Println(map1)
+    /*
+        SALIDA
+        map[dos:2 tres:3 uno:1]
+    */
+
+    map1["cuatro"] = 4
+    map1["cinco"] = 5
+
+    fmt.Println(map1)
+    /*
+        SALIDA
+        map[cinco:5 cuatro:4 dos:2 tres:3 uno:1]
+    */
+
+    // Buscar por clave
+    fmt.Println(map1["dos"])
+    /*
+        SALIDA
+        2
+    */
+
+    // Eliminar clave con su valor
+    delete(map1, "cinco")
+
+    fmt.Println(map1)
+    /*
+        SALIDA
+        map[cuatro:4 dos:2 tres:3 uno:1]
+    */
+
+
+    // Declaración de un map vacío, lo inicializamos con make
+    map2 := make(map[int] string)
+
+    map2[1] = "uno"
+
+    fmt.Println(map2)
+    /*
+        SALIDA
+        map[1:uno]
+    */
+}
+```
+
+## For y Range
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+
+    array1 := []int{1, 2, 3, 4, 5}
+
+    // _ para no alterar el indice, num para el valor
+    for _, num := range array1 {
+        fmt.Println(num)
+    }
+    /*
+        SALIDA:
+        1
+        2
+        3
+        4
+        5
+    */
+
+
+    // i para el indice, num para el valor
+    for i, num := range array1 {
+        fmt.Println(i, "=>", num)
+    }
+    /*
+        SALIDA:
+        0 => 1
+        1 => 2
+        2 => 3
+        3 => 4
+        4 => 5
+    */
+
+    suma := 0
+    for _, num := range array1{
+        suma += num
+    }
+    fmt.Println("Suma:", suma)
+    /*
+        SALIDA:
+        Suma: 15
+    */
+
+
+    // Iterar sobre un map
+    colores := map[string]string{
+        "rojo" : "#ff0000", 
+        "verde": "#00ff00", 
+        "azul" : "#0000ff",
+    }
+
+    for color, hex := range colores {
+        fmt.Println(color, "=>", hex)
+    }
+    /*
+        SALIDA:
+        rojo => #ff0000
+        verde => #00ff00
+        azul => #0000ff
+    */
+}
+```
+
+## Struct y nuevos tipos de datos
+
+En Go podemos crear nuevos tipos de datos con `type`
+
+```go
+package main
+
+import "fmt"
+
+// Aqui definimos el tipo entero que sera tipo int
+type entero int
+
+func main() {
+
+    // Definimos una variable edad que es de tipo entero
+    var edad entero = 22
+
+    fmt.Println(edad)
+
+    /*
+        SALIDA:
+        22
+    */
+}
+```
+
+Las `struct` en Go, es lo mas similar a POO
+
+```go
+package main
+
+import "fmt"
+
+// Curso es una estructura
+type Curso struct {
+    nombre string
+    url   string
+    // slice de strings
+    habilidad []string
+}
+
+func main() {
+
+    curso1 := Curso{
+        nombre: "Curso profesional de Go!",
+        url:   "https://wilovy.com/notas/go_desde_0",
+        habilidad: []string{"Backend", "13hrs"},
+    }
+
+    fmt.Println(curso1)
+    /*
+        SALIDA:
+        {Curso profesional de Go! https://wilovy.com/notas/go_desde_0 [Backend 13hrs]}
+    */
+
+    // Acceder a un campo
+    fmt.Println(curso1.nombre)
+    /*
+        SALIDA:
+        Curso profesional de Go!
+    */
+
+    // Crear una instancia de un struct sin valores
+    curso2 := new(Curso)
+
+    curso2.nombre = "Curso profesional de Prisma!"
+    curso2.url = "https://wilovy.com/notas/prisma_desde_0"
+    curso2.habilidad = []string{"Backend", "3hrs"}
+
+    fmt.Println(curso2)
+    /*
+        SALIDA:
+        &{Curso profesional de Prisma! https://wilovy.com/notas/prisma_desde_0 [Backend 3hrs]}
+    */
+}
+```
+
+## Metodos y herencia
+
+Los metodos son funciones que se ejecutan en el contexto de una estructura
+
+```go
+package main
+
+import "fmt"
+
+// Curso es una estructura
+type Curso struct {
+    nombre string
+    url   string
+    // slice de strings
+    habilidad []string
+}
+
+// Inscribirse es un método de la estructura Curso
+func (c Curso) Inscribirse(nombre string){
+    fmt.Printf("%s se ha inscrito al curso %s\n", nombre, c.nombre)
+}
+
+func main() {
+
+    curso1 := Curso{
+        nombre: "Curso profesional de Go!",
+        url:   "https://wilovy.com/notas/go_desde_0",
+        habilidad: []string{"Backend", "13hrs"},
+    }
+
+    fmt.Println(curso1)
+
+    // Acceder al metodo Inscribirse
+    curso1.Inscribirse("Wilovy")
+    /*
+        SALIDA:
+        Wilovy se ha inscrito al curso Curso profesional de Go!
+    */
+    
+}
+```
+
+Heredar una Struct dentro de otra Struct
+
+```go
+package main
+
+import "fmt"
+
+// Curso es una estructura
+type Curso struct {
+    nombre string
+    url   string
+    // slice de strings
+    habilidad []string
+}
+
+// Inscribirse es un método de la estructura Curso
+func (c Curso) Inscribirse(nombre string){
+    fmt.Printf("%s se ha inscrito al curso %s\n", nombre, c.nombre)
+}
+
+// Carrera es una estructura
+type Carrera struct{
+    nombreCarrera string
+    duracionCarrera int
+
+    // Heredamos Curso
+    Curso
+}
+
+func main() {
+
+    carrera1 := Carrera{
+        nombreCarrera: "Carrera de Go!",
+        duracionCarrera: 12,
+
+        Curso: Curso{
+            nombre: "Curso profesional de Go!",
+            url: "https://...",
+            habilidad: []string{"Backend"},
+        },
+    }
+
+    fmt.Println(carrera1)
+    carrera1.Inscribirse("Juanito")
+    /*
+        SALIDA:
+        {Carrera de Go! 12 {Curso profesional de Go! https://... [Backend]}}
+        Juanito se ha inscrito al curso Curso profesional de Go!
+    */
+
+
+    // Creando una instancia de Carrera
+    carrera2 := new(Carrera)
+    carrera2.nombreCarrera = "Carrera de Python"
+    carrera2.duracionCarrera = 24
+    
+    carrera2.nombre = "Curso profesional de Python"
+    carrera2.url = "https://..."
+    carrera2.habilidad = []string{"Backend", "Data Science"}
+
+    fmt.Println(carrera2)
+    carrera2.Inscribirse("Pepito")
+    /*
+        SALIDA:
+        &{Carrera de Python 24 {Curso profesional de Python https://... [Backend Data Science]}}
+        Pepito se ha inscrito al curso Curso profesional de Python
+    */
+}
+```
 
 <style>
     h1{
