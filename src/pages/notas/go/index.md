@@ -1310,6 +1310,11 @@ func main() {
 <br>
 
 <style>
+
+    a{
+        color: #26bb80;
+    }
+
     h1{
         margin: 2rem 0;
         font-weight: 800;
